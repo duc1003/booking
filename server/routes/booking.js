@@ -1,6 +1,8 @@
-const router = require("express").Router()
+import express from "express"
 
-const Booking = require("../models/Booking")
+const router = express.Router()
+
+import Booking from "../models/Booking.js";
 
 /* CREATE BOOKING */
 router.post("/create", async (req, res) => {
@@ -15,4 +17,4 @@ router.post("/create", async (req, res) => {
   }
 })
 
-module.exports = router
+export default router;

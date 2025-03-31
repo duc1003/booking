@@ -1,8 +1,9 @@
-const router = require("express").Router()
+import express from "express";
+const router = express.Router();
 
-const Booking = require("../models/Booking")
-const User = require("../models/User")
-const Listing = require("../models/Listing")
+import Listing from "../models/Listing.js";
+import User from "../models/User.js";
+import Booking from "../models/Booking.js";
 
 /* GET TRIP LIST */
 router.get("/:userId/trips", async (req, res) => {
@@ -65,4 +66,4 @@ router.get("/:userId/reservations", async (req, res) => {
 })
 
 
-module.exports = router
+export default router;

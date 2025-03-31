@@ -1,8 +1,8 @@
-const router = require("express").Router();
-const multer = require("multer");
+import express from "express";
+const router = express.Router();
+import multer from "multer";
 
-const Listing = require("../models/Listing");
-const User = require("../models/User")
+import Listing from "../models/Listing.js";
 
 /* Configuration Multer for File Upload */
 const storage = multer.diskStorage({
@@ -135,4 +135,4 @@ router.get("/:listingId", async (req, res) => {
   }
 })
 
-module.exports = router
+export default router;
